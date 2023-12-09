@@ -44,8 +44,7 @@ export const ClockProvider = ({ children }) => {
     };
 
     const handleStartTimer = () => {
-        clearInterval(intervalRef.current);
-        setIsPaused(true);
+        clearInterval(intervalRef.current);        
         if (!isPaused) {
             intervalRef.current = setInterval(() => {
                 setTimer((prevTimer) => Math.max(prevTimer - 1, 0));
